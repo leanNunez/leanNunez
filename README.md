@@ -54,6 +54,14 @@
 
 <br>
 
+- **Testing**:
+
+  ![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=for-the-badge&logo=vitest&logoColor=white)
+  ![Testing Library](https://img.shields.io/badge/Testing_Library-E33332?style=for-the-badge&logo=testing-library&logoColor=white)
+  ![Supertest](https://img.shields.io/badge/Supertest-000000?style=for-the-badge&logoColor=white)
+
+<br>
+
 - **Tools & Deployment**:
 
   ![Git](https://img.shields.io/badge/Git-E44C30?style=for-the-badge&logo=git&logoColor=white)
