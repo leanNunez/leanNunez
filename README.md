@@ -107,13 +107,6 @@ Ask it about me and it answers from retrieved context, not from vibes.
 
 <br>
 
-## GitHub
-
-<p align="center">
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=leanNunez&show_icons=true&hide_border=true&bg_color=0d1117&text_color=c9d1d9&icon_color=22d3ee&title_color=22d3ee" alt="GitHub stats"/>
-  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=leanNunez&layout=compact&hide_border=true&bg_color=0d1117&text_color=c9d1d9&title_color=22d3ee" alt="Top languages"/>
-</p>
-
 ---
 
 <p align="center">
