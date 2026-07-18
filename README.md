@@ -17,7 +17,7 @@
 
 I build full stack web apps and put AI **inside** them — retrieval, function calling, agents. Not demos: auth, tests, CI/CD and real deploys included.
 
-- 🎓 Studying [Tecnicatura Universitaria en Programación](https://cicloscortos.frt.utn.edu.ar/pregrado/t_u_programacion/) at [UTN — Facultad Regional Tucumán](https://www.utn.edu.ar/es/)
+- 🎓 **Final-year** student of the [Tecnicatura Universitaria en Programación](https://cicloscortos.frt.utn.edu.ar/pregrado/t_u_programacion/) at [UTN — Facultad Regional Tucumán](https://www.utn.edu.ar/es/)
 - 🤖 **IBM RAG and Agentic AI** Professional Certificate — 10 courses + capstone ([verify](https://coursera.org/verify/professional-cert/QWM3S2AR4S9Y))
 - 🧠 Building agents that reason over tools with LangChain, LangGraph, CrewAI and MCP
 - 🏅 Google Cloud Skill Badges — Gemini &amp; Vertex AI ([Credly](https://www.credly.com/users/lean-nunez/badges))
@@ -27,6 +27,19 @@ I build full stack web apps and put AI **inside** them — retrieval, function c
 <br>
 
 ## Featured projects
+
+### 🔧 [Repuestero](https://repuestero.vercel.app/) — Multi-tenant, AI-native ERP
+
+A rewrite of a real legacy ERP (Delphi/Paradox) for an auto-parts store — architecture with a scar behind it, not architecture for its own sake.
+
+- **Tenant isolation via PostgreSQL Row-Level Security** — the `org_id` is resolved from the database, **not** the JWT, and the app connects on a `NOSUPERUSER` role with no `BYPASSRLS`. Proven with a dedicated cross-tenant isolation test
+- **NL2SQL assistant orchestrated with LangGraph** (state machine with retries + Groq → OpenAI fallback) behind **5 layers of defense**: prompt-injection filter (keyword + semantic), SQL guard with sqlglot, read-only DB role and statement timeout — answers stream over SSE
+- **Human-in-the-loop invoice ingestion**: a multimodal model reads a photo, the LLM *proposes* and a human *approves* — the model never writes to the DB; one invoice = one transaction, with a unique index on the image hash as a concurrency lock
+- CI on GitHub Actions (9 pytest suites incl. RLS isolation + vitest) against a real Postgres/pgvector, with branch protection on `main`
+
+`FastAPI` `SQLAlchemy 2.0` `PostgreSQL` `RLS` `pgvector` `LangGraph` `Groq/OpenAI` `sqlglot` `React 19` `Supabase`
+
+<br>
 
 ### 🛒 [PremiumTech](https://ecommerce-tech-nu.vercel.app/) — Full stack e-commerce with an AI shopping assistant
 
@@ -83,6 +96,7 @@ Ask it about me and it answers from retrieved context, not from vibes.
 ![Python](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-109989?style=for-the-badge&logo=fastapi&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 
